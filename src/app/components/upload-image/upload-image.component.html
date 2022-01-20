@@ -1,0 +1,35 @@
+<div class="upload">
+  <h2>Upload new Image</h2>
+  <p *ngIf="formError" class="error">{{formError}}</p>
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Image Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+    </p>
+
+    <div class="upload__item">
+      <div class="upload__category">Image</div>
+      <div class="upload__file">
+        <input class="upload__input" type="file" (change)="uploadImage($event.target)" />
+        <div class="upload__format" *ngIf="!uploadedImage">
+          PNG, GIF, WEBP. Max 1Gb.
+        </div>
+        <img *ngIf="uploadedImage" [src]="uploadedImage" alt="uploaded image" class="upload__image" />
+      </div>
+    </div>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Image Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </p>
+
+    <button mat-flat-button color="primary" type="submit" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Upload</span>
+      <span *ngIf="isLoading">Loading...</span>
+    </button>
+  </form>
+</div>

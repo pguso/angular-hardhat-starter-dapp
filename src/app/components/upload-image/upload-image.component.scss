@@ -1,0 +1,41 @@
+.upload {
+  &__item {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    background-color: #23262f;
+    height: 100%;
+  }
+
+  &__file {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 182px;
+    margin-top: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f4f5f6;
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 400px;
+    opacity: 0;
+  }
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.error {
+  color: #ff0000;
+}

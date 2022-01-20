@@ -1,0 +1,13 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.active {
+  background: rgba(0,0,0,.2);
+}

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  contractAddress: '0x04215C89a6af0f7ed9103c48BaF6A8e19f119470',
+  ipfs: 'https://ipfs.infura.io'
 };
 
 /*

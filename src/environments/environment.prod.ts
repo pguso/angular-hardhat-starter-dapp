@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  contractAddress: '',
+  ipfs: 'https://ipfs.infura.io'
 };
